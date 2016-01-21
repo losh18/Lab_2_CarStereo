@@ -238,7 +238,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/"
+                    android:id="@+id/cdSlot"
                     android:layout_weight="1"
                     android:background="#ff000000">
 

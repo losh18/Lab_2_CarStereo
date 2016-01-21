@@ -44,7 +44,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Power"
-                        android:id="@+id/powerButton" />
+                        android:id="@+id/powerButton"
+                        android:checked="false" />
                 </TableRow>
 
                 <TableRow
@@ -232,6 +233,29 @@
                         android:id="@+id/repeatButton"
                         android:layout_weight="1"
                         android:layout_gravity="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/"
+                    android:layout_weight="1"
+                    android:background="#ff000000">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_span="5"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="595dp"
+                            android:layout_height="25dp"
+                            android:background="#ff7f7f7f"
+                            android:layout_gravity="center"></LinearLayout>
+                    </FrameLayout>
                 </TableRow>
             </TableLayout>
 

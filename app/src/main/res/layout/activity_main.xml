@@ -83,7 +83,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/tunerBar"
                         android:layout_gravity="center"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:max="1000" />
                 </TableRow>
 
                 <TableRow
@@ -98,7 +99,7 @@
                         android:textSize="36sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:text="&lt;station>"
                         android:id="@+id/stationName"
@@ -175,7 +176,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2"
+                        android:text="3"
                         android:id="@+id/presetThreeButton"
                         android:layout_weight="1"
                         android:layout_gravity="center" />
@@ -185,6 +186,20 @@
                         android:layout_height="wrap_content"
                         android:text="4"
                         android:id="@+id/presetFourButton"
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:id="@+id/presetFiveButton"
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:id="@+id/presetSixButton"
                         android:layout_weight="1"
                         android:layout_gravity="center" />
                 </TableRow>

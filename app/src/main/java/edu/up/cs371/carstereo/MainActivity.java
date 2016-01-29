@@ -29,6 +29,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private TextView station;
     private TextView presets;
     private TextView stationName;
+    private TextView volumeText;
+
     private SeekBar volumeBar;
     private SeekBar tunerBar;
     private int onColor = 0xFF000000;
@@ -53,12 +55,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         presetButton6 = (Button)findViewById(R.id.presetSixButton);
 
 
-
+        volumeText = (TextView)findViewById(R.id.volumeText);
         volume = (TextView)findViewById(R.id.volume);
         tuner = (TextView)findViewById(R.id.tuner);
         station = (TextView)findViewById(R.id.station);
         stationName = (TextView)findViewById(R.id.stationName);
         tunerBar = (SeekBar)findViewById(R.id.tunerBar);
+        volumeBar = (SeekBar)findViewById(R.id.volumeBar);
         presets = (TextView)findViewById(R.id.presets);
 
         volume.setTextColor(offColor);
@@ -71,6 +74,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         amButton.setOnClickListener(this);
         fmButton.setOnClickListener(this);
         tunerBar.setOnSeekBarChangeListener(this);
+        volumeBar.setOnSeekBarChangeListener(this);
         presetButton1.setOnClickListener(this);
         presetButton2.setOnClickListener(this);
         presetButton3.setOnClickListener(this);
@@ -200,9 +204,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        Progress = progress;
-        setStationName();
-
+        if (isOn) {
+            if (seekBar.getId() == R.id.tunerBar) {
+                Progress = progress;
+                setStationName();
+            }
+            if (seekBar.getId() == R.id.volumeBar) {
+                volumeText.setText("" + progress);
+            }
+        }
     }
 
     @Override

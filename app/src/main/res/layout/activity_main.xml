@@ -46,6 +46,7 @@
                         android:text="Power"
                         android:id="@+id/powerButton"
                         android:checked="false" />
+
                 </TableRow>
 
                 <TableRow
@@ -64,6 +65,14 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/volumeBar"
                         android:layout_gravity="center"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/volumeText"
+                        android:textSize="36sp"
                         android:layout_weight="1" />
                 </TableRow>
 
@@ -101,10 +110,11 @@
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="&lt;station>"
                         android:id="@+id/stationName"
                         android:textSize="36sp"
-                        android:paddingLeft="5dp" />
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_span="1" />
                 </TableRow>
             </TableLayout>
 
